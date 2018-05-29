@@ -1,0 +1,44 @@
+/*********************************************
+ * OPL 12.7.1.0 Data
+ * Author: Administrator
+ * Creation Date: 20-04-2018 at 22:28:38
+ *********************************************/
+ 
+ /**********************Input***********************/	 
+	 
+	SheetConnection input ("Input.xlsx");
+	
+	period from SheetRead(input, "period");
+	
+	part from SheetRead(input, "part");
+	partInitial from SheetRead(input, "partInitial");
+	partCriteria from SheetRead(input, "partCriteria");
+
+	worker from SheetRead(input, "worker");
+	//workerSkill from SheetRead(input, "workerSkill");
+	
+
+	nbspindles from SheetRead(input, "nbspindles");
+	partGroup from SheetRead(input, "partGroup");
+				
+	//demand from SheetRead(input, "orderDemand");
+	//priority from SheetRead(input, "orderPriority");
+	
+	backorderCost from SheetRead(input, "BackorderCost");
+	changeCost from SheetRead(input, "ChangeCost");
+	salaryCost from SheetRead(input, "SalaryCost");
+	
+	orderQty from SheetRead(input, "orderExistQty");
+	
+	workerSkill from SheetRead(input, "workerSkill");
+	workerSkillLever from SheetRead(input, "workerSkillLever");
+	
+
+ /**********************Output**********************/
+ /*
+ 	SheetConnection output ("Output.xlsx");
+
+ 	productionReport to SheetWrite(output, "productionQty");
+ 	backorderReport to SheetWrite(output, "backorderQty");
+ 	inventoryReport to SheetWrite(output, "inventoryBalance");
+ 	workerScheduleReport to SheetWrite(output, "workerSchedule");*/
