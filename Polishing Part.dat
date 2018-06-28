@@ -1,7 +1,7 @@
 
  /**********************data***********************/	 
 
-	SheetConnection data ("Data.xlsx");
+	SheetConnection data ("Data1.xlsx");
 	
 	worker from SheetRead(data, "worker");
 	period from SheetRead(data, "period");
@@ -29,11 +29,10 @@
 
 
  /**********************Output**********************/
- 	SheetConnection outgroup ("Group.xlsx");
+ 	SheetConnection out ("Part.xlsx");
  	
- 	outproductionReport to SheetWrite(outgroup, "outproductionQty");
- 	outbackorderReport to SheetWrite(outgroup, "outbackorderQty");
- 	outinventoryReport to SheetWrite(outgroup, "outinventoryBalance");
+ 	outproductionReport to SheetWrite(out, "outproductionQty");
+ 	outbackorderReport to SheetWrite(out, "outbackorderQty");
+ 	outinventoryReport to SheetWrite(out, "outinventoryQty");
  	
- 	outworkerScheduleGroup to SheetWrite(outgroup, "outworkerScheduleGroup");
- 	//outWorkerSchedulePart to SheetWrite(data, "outWorkerSchedulePart");
+ 	outworkerSchedule to SheetWrite(out, "outworkerSchedule");
